@@ -1,17 +1,14 @@
 // Home Content
 
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
@@ -58,13 +55,18 @@
       }
 
       .btn {
+        .buttons(1px, solid, White);
+        &:hover {
+          background-color: @shuttle-gray;
+          font-style: italic;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +74,42 @@
       }
     }
   }
-}// home
+} // home
+
+@media @phone {
+  .sky {
+    display: @display;
+  }
+  .launch {
+    display: @display;
+  }
+
+  section.space-images img.blast {
+    width: 100%;
+  }
+
+  .home .walk {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .home .walk .walk-text {
+    width: 100%;
+  }
+  .home section.walk div.walk-img {
+    width: 100%;
+  }
+
+  .btn {
+    margin: 0 auto;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  .walk-text h3 {
+    margin-top: 5%;
+  }
+}
